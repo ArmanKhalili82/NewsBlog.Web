@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using NewsBlog.Business.BlogService;
 using NewsBlog.Business.CommentService;
 using NewsBlog.Business.LikeService;
+using NewsBlog.Business.UserService;
 using NewsBlog.DataAccess;
 using System.Text;
 
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ILikeService, LikeService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

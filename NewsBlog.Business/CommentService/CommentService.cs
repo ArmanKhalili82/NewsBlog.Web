@@ -69,7 +69,7 @@ public class CommentService : ICommentService
         return new CommentDto
         {
             CommentId = comment.CommentId,
-            BlogId = comment.BlogId,
+            //BlogId = comment.BlogId,
             Author = comment.Author,
             Content = comment.Content,
             CreatedAt = comment.CreatedAt
